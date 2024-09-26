@@ -169,6 +169,7 @@ Setelah mengedit di file .bash_logout dan menyimpan nya. nanti semua terminal te
 ## b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang terakhir dilakukan  
        $ !-5 
 ![jwbn6b](https://github.com/user-attachments/assets/32f759d1-736d-487b-b26c-4ca98b05c8ae)
+
 !-5 : Mengeksekusi kembali perintah yang dilakukan 5 instruksi sebelumnya.
 
 ## c. Ulangi instruksi yang terakhir.  Gunakan juga ^P dan ^N untuk bernavigasi pada history bufer  
