@@ -134,11 +134,20 @@ Setelah mengedit di file .bash_logout dan menyimpan nya. nanti semua terminal te
        $ find / -print > files 2>/dev/null &  
        $ jobs  
 ![jwbn5b](https://github.com/user-attachments/assets/ffce21ea-297c-4f75-92b4-7ae614bbfeb2)
+- find / -print > files 2>/dev/null &
+  - find / -print > files: Mencari dan mencetak semua file mulai dari root /, kemudian mengarahkan output ke file bernama files.
+  - 2>/dev/null: Mengarahkan pesan error (jika ada) ke /dev/null untuk menyembunyikannya.
+  - &: Menjalankan perintah ini di background.
+- jobs
+  - Menampilkan daftar semua pekerjaan yang sedang berjalan di background
 
 ## c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke background  
        $ fg %1  
        $ bg 
 ![jwbn5c](https://github.com/user-attachments/assets/6efee02b-a988-43a9-bdf9-b77fd7f79479)
+- fg : untuk memindahkan pekerjaan pertama (%1) dari background ke foreground.
+- Ctrl+Z : untuk menghentikannya sementara (suspend). Proses ini akan berpindah ke status stopped di background.
+- bg : menjalankannya kembali di background dengan perintah
 
 ## d.  Stop program background dengan utilitas kil  
        $ ps x  
@@ -146,25 +155,33 @@ Setelah mengedit di file .bash_logout dan menyimpan nya. nanti semua terminal te
 ![jwbn5d](https://github.com/user-attachments/assets/7c504059-c015-4d5b-80c4-c7079cddde4a)
 ![jwbn5d1](https://github.com/user-attachments/assets/fa47266c-e0df-4ebc-8736-2cc711cd02ad)
 ![jwbn5d2](https://github.com/user-attachments/assets/ae7afeec-84e9-4ed3-8154-69e3432531e0)
+- ps x : Untuk melihat daftar proses beserta nomor PID (Process ID).
+- kill : menghentikan program yang ingin di hentikan.
 
 # 6. History  
 ## a. Ganti nilai HISTSIZE dari 1000 menjadi 20  
        $ HISTSIZE=20  
        $ h 
 ![jwbn6a](https://github.com/user-attachments/assets/ac06d5d7-094f-479d-be86-43352221bde7)
+- HISTSIZE adalah variabel yang menentukan jumlah baris history yang disimpan di memori selama sesi shell saat ini.
+- HISTSIZE=20 : akan membatasi jumlah perintah yang disimpan dalam history menjadi 20.
 
 ## b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang terakhir dilakukan  
        $ !-5 
 ![jwbn6b](https://github.com/user-attachments/assets/32f759d1-736d-487b-b26c-4ca98b05c8ae)
+!-5 : Mengeksekusi kembali perintah yang dilakukan 5 instruksi sebelumnya.
 
 ## c. Ulangi instruksi yang terakhir.  Gunakan juga ^P dan ^N untuk bernavigasi pada history bufer  
        $ !!  
 ![jwbn6c](https://github.com/user-attachments/assets/d5a10508-bc02-459b-b639-982ca01fa8f4)
+- !! : Menjalankan perintah terakhir di history.
 
 ## d.  Ulangi instruksi pada history bufer nomor 150  
        $ !150 
 ![jwbn6d](https://github.com/user-attachments/assets/bd81a196-22c3-4427-827a-f0056d9b7773)
+!150 : Menjalankan perintah yang tercatat pada nomor 150 di history.
 
 ## e.  Ulangi instruksi dengan prefix “ls”  
        $ !ls 
 ![jwbn6e](https://github.com/user-attachments/assets/4a137958-e9f7-45b5-a584-9f2a13c905d9)
+- !ls : Untuk mengulangi perintah terbaru yang dimulai dengan ls.
